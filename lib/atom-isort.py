@@ -95,15 +95,11 @@ class IsortTools(object):
         return
 
 if __name__ == '__main__':
-    IsortTools().read_and_process()
-    quit()
-
-    # try:
-    #     import isort
-    #     IsortTools().watch()
-    # except Exception as e:
-    #     error_response = json.dumps({'type': 'error', 'error': repr(e)})
-    #     sys.stdout.write(error_response + '\n')
-    #     sys.stdout.flush()
-    # finally:
-    #     quit()
+    try:
+        IsortTools().read_and_process()
+    except Exception as e:
+        error_response = json.dumps({'type': 'error', 'error': repr(e)})
+        sys.stdout.write(error_response + '\n')
+        sys.stdout.flush()
+    finally:
+        quit()

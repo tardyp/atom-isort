@@ -83,14 +83,14 @@ class AtomIsort
           Please try setting the path in package settings, and then restart atom.
           Consider posting an issue on: #{this._issueReportLink}
           """,
-          detail: err,
+          detail: py_response.error,
           dismissable: true
       else
         atom.notifications.addError """
           Atom-isort encountered an unexpected error.
           Consider posting an issue on: #{this._issueReportLink}
           """,
-          detail: err,
+          detail: py_response.error,
           dismissable: true
       return null
 
